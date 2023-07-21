@@ -1,0 +1,8 @@
+﻿@model List<string>
+@{
+    Layout = null;
+}
+
+<h2> Student Details List</h2>
+@Html.Action("StudentDetails", new { studentlist = new List<string> { "Shanmugasundaram", "Lakshmi Shanmugasundaram" } })
+@{ Html.RenderAction("StudentDetails", new { studentlist = new List<string> { "Kamalnath Shanmugasundaram", "Lina Kamalnath" } });}

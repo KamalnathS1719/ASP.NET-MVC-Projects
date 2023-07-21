@@ -1,0 +1,52 @@
+﻿@model ForgeryTokensMVC.Models.StudentModel
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center">Student Details</th>
+            </tr>
+            <tr>
+                <td>StudentId:</td>
+                <td>@Html.TextBoxFor(m => m.StudentId)</td>
+            </tr>
+            <tr>
+                <td>StudentName:</td>
+                <td>@Html.TextBoxFor(m => m.StudentName)</td>
+            </tr>
+            <tr>
+                <td>StudentCity:</td>
+                <td>@Html.TextBoxFor(m => m.StudentCity)</td>
+            </tr>
+            <tr>
+                <td>StudentGender:</td>
+                <td>
+                    @Html.DropDownListFor(m => m.StudentGender, new List<SelectListItem>
+                    { new SelectListItem{Text="Male", Value="M"},
+                      new SelectListItem{Text="Female", Value="F"} }, "Please Select")
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+
+        </table>
+    }
+
+</body>
+</html>
+

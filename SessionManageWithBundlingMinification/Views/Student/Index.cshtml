@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ViewData["Title"] - SessionManageMVC</title>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/SessionManageMVC.styles.css" asp-append-version="true" />
+</head>
+<h2>Login</h2>
+<form method="post" asp-controller="Student" asp-action="Index">
+    Username:<input type="text" placeholder="Username" name="Username" />
+    <br />
+    Password:<input type="password" placeholder="Password" name="Password"/>
+    <br />
+    <input type="submit" value="Login" class="btn btn-primary" />
+</form>
+<h3> Guide Lines</h3>
+<p>
+    <ul>
+        <li>Enter your user name in that above <strong><em>Username</em></strong> box.</li>
+        <li>Enter your password in that above <strong><em>Password</em></strong> box.</li>
+        <li>Click <strong><em>Login</em></strong> button. it redirects to <strong><em>Welcome</em></strong> pages.</li>
+        <li>Additionaly added <strong><em>Bundling and Minification concepts</em></strong> to this project.</li>
+    </ul>
+</p>
+<h3> Bundling and Minification concepts </h3>
+<p>
+    <ul>
+        <li>Additionaly added <strong><em>Bundling and Minification concepts</em></strong> to this project.</li>
+    </ul>
+    <br />
+    Thanks for login...!!
+</p>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.min.js" asp-append-version="true"></script>

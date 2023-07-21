@@ -1,0 +1,48 @@
+﻿@model CodeFirst.Models.StudentData
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>you need to delete this?</h3>
+<div>
+    <h4>StudentData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

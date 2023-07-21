@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelFirstMF.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelFirstMFStoreContainer">
+    <EntitySet Name="Students" EntityType="ModelFirstMF.Store.Students" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudId" />
+    </Key>
+    <Property Name="StudId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudAge" Type="int" Nullable="false" />
+    <Property Name="StudCity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudCountry" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelFirstMFStoreContainer" CdmEntityContainer="ModelFirstMFContainer">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelFirstMF.Student)">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudId" ColumnName="StudId" />
+          <ScalarProperty Name="StudName" ColumnName="StudName" />
+          <ScalarProperty Name="StudAge" ColumnName="StudAge" />
+          <ScalarProperty Name="StudCity" ColumnName="StudCity" />
+          <ScalarProperty Name="StudCountry" ColumnName="StudCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

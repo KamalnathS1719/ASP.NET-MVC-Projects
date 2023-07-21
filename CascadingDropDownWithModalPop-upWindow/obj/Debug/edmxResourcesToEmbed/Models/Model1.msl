@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CSSDropDownListDBModelStoreContainer" CdmEntityContainer="CSSDropDownListDBEntities1">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="CSSDropDownListDBModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudId" ColumnName="StudId" />
+          <ScalarProperty Name="StudName" ColumnName="StudName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentStates">
+      <EntityTypeMapping TypeName="CSSDropDownListDBModel.StudentState">
+        <MappingFragment StoreEntitySet="StudentState">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StudId" ColumnName="StudId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
